@@ -1,0 +1,47 @@
+p{
+    margin: 0;
+}
+.cards{
+    margin-top: 30px;
+    display: flex;
+    mat-card{
+        min-width: 300px;
+        .row{
+            display: flex;
+            mat-icon{
+                width: auto;
+                height: auto;
+                opacity: 0.7;
+                font-size: xx-large;
+                margin-right: 8px;
+            }
+            .data{
+                .label{
+                    line-height: 1;
+                    font-size: 0.9rem;
+                    opacity: 0.7;
+                }
+                .info{
+                    margin-top: 5px;
+                    line-height: 1;
+                    font-size: 1.1rem;
+                    font-weight: 500;
+                    opacity: 0.9;
+                }
+            }
+            &:not(:first-child){
+                margin-top: 10px;
+            }
+        }
+        &:not(:first-child){
+            margin-left: 30px;
+        }
+        a{
+            display: flex;
+            margin-top: 20px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #1b5c7c;
+        }
+    }
+}

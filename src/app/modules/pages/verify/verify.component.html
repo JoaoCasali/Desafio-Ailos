@@ -1,0 +1,11 @@
+<div class="title-subtitle">
+    <h1>Informe o CPF do futuro cooperado (a)</h1>
+    <p>Se necessário, você pode duplicar uma conta existenten ou pausar e retornar este cadastro futuramente.</p>
+    <p>Digite apenas os números (sem pontos ou traços).</p>
+</div>
+
+<form [formGroup]="FormCPF" (ngSubmit)="onSubmit()" autocomplete="off">
+    <label>CPF</label>
+    <input matInput formControlName="Cpf" placeholder="000.000.000-00" mask="000.000.000-00" [(ngModel)]="data">
+    <button mat-raised-button type="submit" [disabled]="!main">Consultar por CPF</button>
+</form>

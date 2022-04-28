@@ -1,0 +1,30 @@
+.title-subtitle{
+    h1{
+        line-height: 1;
+    }
+    p{
+        font-size: 1rem;
+        opacity: 0.9;
+        line-height: 1;
+    }
+}
+
+form{
+    label{
+        display: block;
+        font-weight: 600;
+        line-height: 1;
+        margin-bottom: 5px;
+    }
+    input{
+        width: 240px;
+        padding: 9px;
+        border: 1px solid #1b5c7c;
+        border-radius: 2px;
+        margin-right: 20px;
+    }
+    button{
+        background-color: #1b5c7c;
+        color: white;
+    }
+}

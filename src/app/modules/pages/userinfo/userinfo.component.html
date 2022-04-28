@@ -1,0 +1,58 @@
+<app-verify [data]="user.Cpf" [main]="false"></app-verify>
+
+<div class="cards">
+    <mat-card>
+        <mat-card-title>Situação cadastral do CPF</mat-card-title>
+        <mat-card-subtitle>Consulta na Receita Federal</mat-card-subtitle>
+        <mat-card-content>
+            <div class="row">
+                <mat-icon>person</mat-icon>
+                <div class="data">
+                    <p class="label">Nome</p>
+                    <p class="info">{{user.Nome}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div [hidden]="cpfIsBlocked()">
+                    <mat-icon style="color: red;">highlight_off</mat-icon>
+                </div>
+                <div [hidden]="!cpfIsBlocked()">
+                    <mat-icon style="color: green;">check_circle_outline</mat-icon>
+                </div>
+                <div class="data">
+                    <p class="label">Situação do CPF</p>
+                    <p class="info">{{user.SituacaoCPF}}</p>
+                </div>
+            </div>
+
+        </mat-card-content>
+    </mat-card>
+    <mat-card>
+        <mat-card-title>Conta aplicação</mat-card-title>
+        <mat-card-subtitle>Cooperativa Viacredi</mat-card-subtitle>
+        <mat-card-content>
+            <div class="row">
+                <mat-icon>credit_card</mat-icon>
+                <div class="data">
+                    <p class="label">Número de conta</p>
+                    <p class="info">{{user.ContaAplicacao}}</p>
+                </div>
+            </div>
+            <a>Duplicar conta</a>
+        </mat-card-content>
+    </mat-card>
+    <mat-card>
+        <mat-card-title>Conta corrente</mat-card-title>
+        <mat-card-subtitle>Cooperativa Viacredi</mat-card-subtitle>
+        <mat-card-content>
+            <div class="row">
+                <mat-icon>credit_card</mat-icon>
+                <div class="data">
+                    <p class="label">Número de conta</p>
+                    <p class="info">{{user.ContaCorrente}}</p>
+                </div>
+            </div>
+            <a>Duplicar conta</a>
+        </mat-card-content>
+    </mat-card>
+</div>
